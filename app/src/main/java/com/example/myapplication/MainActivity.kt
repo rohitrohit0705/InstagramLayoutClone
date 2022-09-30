@@ -38,7 +38,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-//@Preview(showSystemUi = true, showBackground = true)
 @Composable
 fun InstagramStory(){
     val storyList = arrayListOf(

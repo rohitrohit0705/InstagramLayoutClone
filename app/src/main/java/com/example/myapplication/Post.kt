@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+
 data class Post(
     val id:Int,
     var likeCount:Int,
