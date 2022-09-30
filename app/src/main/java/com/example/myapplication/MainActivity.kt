@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -20,9 +21,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-
             MyApplicationTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier
                         .fillMaxSize()
@@ -31,8 +30,7 @@ class MainActivity : ComponentActivity() {
                 ) {
 
                     Column{
-                            InstagramPost()
-
+                        InstagramFeed()
                     }
 
                 }
@@ -45,21 +43,19 @@ class MainActivity : ComponentActivity() {
 fun InstagramStory(){
     val storyList = arrayListOf(
 
-        Story(1,R.drawable.img_1,"name"),
-        Story(1,R.drawable.img_1,"name"),
-        Story(1,R.drawable.img_1,"name"),
-        Story(1,R.drawable.img_1,"name"),
-        Story(1,R.drawable.img_1,"name"),
-        Story(1,R.drawable.img_1,"name"),
-        Story(1,R.drawable.img_1,"name"),
-        Story(1,R.drawable.img_1,"name"),
-        Story(1,R.drawable.img_1,"name"),
-        Story(1,R.drawable.img_1,"name"),
+        Story(1,R.drawable.user_image,"name"),
+        Story(1,R.drawable.user_image,"name"),
+        Story(1,R.drawable.user_image,"name"),
+        Story(1,R.drawable.user_image,"name"),
+        Story(1,R.drawable.user_image,"name"),
+        Story(1,R.drawable.user_image,"name"),
+        Story(1,R.drawable.user_image,"name"),
+        Story(1,R.drawable.user_image,"name"),
+        Story(1,R.drawable.user_image,"name"),
+        Story(1,R.drawable.user_image,"name"),
 
-    )
-
+        )
     StoryDesign(storyList = storyList)
-
 }
 
 @Composable
@@ -73,7 +69,7 @@ fun StoryDesign(storyList:ArrayList<Story>){
 
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
-fun InstagramPost(){
+fun InstagramFeed(){
     val postList = arrayListOf(
         Post(
             1,
@@ -105,8 +101,8 @@ fun InstagramPost(){
             "Hello")
 
     )
-     Design(postList = postList)
-}                               
+    Design(postList = postList)
+}
 @Composable
 fun Design(postList: ArrayList<Post>){
     LazyColumn{

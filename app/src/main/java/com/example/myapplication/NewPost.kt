@@ -15,27 +15,20 @@ import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.platform.InspectableModifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun NewPost(
-    post: Post
-){
-//    val post = Post(
-//        1,
-//        223,
-//        R.drawable.post,
-//        R.drawable.post,
-//        "Rohit",
-//        "hellow")
+fun NewPost( post: Post){
 
     val colors = listOf(Color(0xFFffe53b), Color(0xFFff2525))
 
     Column(Modifier.padding(2.dp)) {
 
             Row{
-                Image(painter = painterResource(id = post.authorImage)
+                Image(
+                    painter = painterResource(id = post.authorImage)
                     , contentDescription = "author",
                     modifier = Modifier
                         .clip(shape = CircleShape)
@@ -50,8 +43,8 @@ fun NewPost(
                 Spacer(modifier = Modifier.width(5.dp))
                 Text(text = post.authorName, fontSize = 18.sp,
                     modifier = Modifier.padding(5.dp,12.dp,0.dp,0.dp))
-                Image(painter =
-                painterResource(id = R.drawable.more_vert),
+                Image(
+                    painter = painterResource(id = R.drawable.more_vert),
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(40.dp)
@@ -60,7 +53,8 @@ fun NewPost(
                     alignment = Alignment.TopEnd,
                 )
             }
-            Image(painter = painterResource(id = post.authorImage),
+            Image(
+                painter = painterResource(id = post.authorImage),
                 contentDescription ="Post" ,
                 modifier = Modifier
                     .fillMaxWidth()
@@ -69,32 +63,31 @@ fun NewPost(
             Spacer(modifier = Modifier.width(5.dp))
 
             Row {
-                Image(painter = painterResource
-                    (id = R.drawable.insta_like),
+                Image(
+                    painter = painterResource(id = R.drawable.insta_like),
                     modifier = Modifier
                         .width(50.dp)
                         .height(50.dp)
                         .padding(5.dp,10.dp,0.dp,0.dp),
                     contentDescription = "Like",
                 )
-                Image(painter = painterResource
-                    (id = R.drawable.insta_comment),
+                Image(painter = painterResource(id = R.drawable.insta_comment),
                     modifier = Modifier
                         .width(50.dp)
                         .height(50.dp)
                         .padding(5.dp,10.dp,0.dp,0.dp),
                     contentDescription = "Like",
                 )
-                Image(painter = painterResource
-                    (id = R.drawable.insta_send),
+                Image(
+                    painter = painterResource(id = R.drawable.insta_send),
                     modifier = Modifier
                         .width(50.dp)
                         .height(50.dp)
                         .padding(5.dp,10.dp,0.dp,0.dp),
                     contentDescription = "Share",
                 )
-                Image(painter = painterResource
-                    (id = R.drawable.insta_save),
+                Image(
+                    painter = painterResource(id = R.drawable.insta_save),
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(50.dp)
